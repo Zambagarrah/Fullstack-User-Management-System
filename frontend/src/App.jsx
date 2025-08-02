@@ -1,7 +1,6 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useAuth } from './context/AuthContext'; // 👈 Add this
 
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -9,18 +8,21 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import UserListPage from './pages/admin/UserListPage';
-
 import PrivateRoute from './utils/PrivateRoute';
-
 import Navbar from './components/Navbar';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
+  const { user } = useAuth(); // 👈 Add this to access user context
+
   return (
     <>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
         <Route
           path="/dashboard"
           element={
@@ -29,6 +31,7 @@ const App = () => {
             </PrivateRoute>
           }
         />
+
         <Route
           path="/profile"
           element={
@@ -37,6 +40,7 @@ const App = () => {
             </PrivateRoute>
           }
         />
+
         <Route
           path="/admin/users"
           element={
@@ -45,7 +49,6 @@ const App = () => {
             </PrivateRoute>
           }
         />
-
       </Routes>
       <ToastContainer />
     </>
