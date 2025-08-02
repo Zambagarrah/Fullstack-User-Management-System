@@ -3,3 +3,4 @@ Step 2: User API (Register, Login, Profile, Admin View) using Django + DRF + JWT
 Step 3: Initialize the React + Vite + Yarn + Bootstrap Frontend
 Step 4: Routing Setup + Axios JWT Instance
 Step 5: Auth Context & Token Management
+Step 6: Auth Pages (Register & Login)
