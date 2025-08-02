@@ -12,6 +12,7 @@ import PrivateRoute from './utils/PrivateRoute';
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
 import Unauthorized from './pages/Uauthorized';
+import AdminDashboard from './pages/admin/AdminDashboard';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
