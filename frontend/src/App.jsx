@@ -10,6 +10,7 @@ import Profile from './pages/Profile';
 import UserListPage from './pages/admin/UserListPage';
 import PrivateRoute from './utils/PrivateRoute';
 import Navbar from './components/Navbar';
+import ProtectedRoute from './components/ProtectedRoute';
 import { ToastContainer } from 'react-toastify';
 
 const App = () => {
@@ -50,6 +51,14 @@ const App = () => {
           }
         />
       </Routes>
+      <Route
+        path="/admin"
+        element={
+          <ProtectedRoute roleRequired="admin">
+            <AdminDashboard />
+          </ProtectedRoute>
+        }
+      />
       <ToastContainer
         position="bottom-right"
         autoClose={3000}

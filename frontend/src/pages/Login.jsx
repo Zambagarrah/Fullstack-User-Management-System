@@ -30,10 +30,6 @@ const Login = () => {
           <input type="text" id="username" name="username" className="form-control" value={formData.username} onChange={handleChange} required />
         </div>
         <div className="mb-3 bg-light p-4 rounded shadow">
-          <label htmlFor="email" className="form-label">Email</label>
-          <input type="email" id="email" name="email" className="form-control" value={formData.email} onChange={handleChange} required />
-        </div>
-        <div className="mb-3 bg-light p-4 rounded shadow">
           <label htmlFor="password" className="form-label">Password</label>
           <input type="password" id="password" name="password" className="form-control" value={formData.password} onChange={handleChange} required />
         </div>
