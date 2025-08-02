@@ -1,0 +1,2 @@
+Step 1: Initialize Backend (Django + DRF + JWT + CORS)
+Step 2: User API (Register, Login, Profile, Admin View) using Django + DRF + JWT.
