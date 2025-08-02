@@ -11,9 +11,12 @@ import Profile from './pages/Profile';
 
 import PrivateRoute from './utils/PrivateRoute';
 
+import Navbar from './components/Navbar';
+
 const App = () => {
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
