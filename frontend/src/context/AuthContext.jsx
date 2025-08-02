@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axiosInstance from '../utils/axiosInstance';
 import jwt_decode from 'jwt-decode';
+import axios from 'axios';
 
 const AuthContext = createContext();
 
@@ -44,6 +45,16 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const getProfile = async () => {
+    const res = await axios.get('/api/profile/');
+    return res.data;
+  };
+
+  const updateProfile = async (data) => {
+    const res = await axios.put('/api/profile/', data);
+    return res.data;
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (localStorage.getItem('refresh_token')) refreshToken();
@@ -53,7 +64,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, loginUser, logoutUser, registerUser }}>
+    <AuthContext.Provider value={{ user, loginUser, logoutUser, registerUser, getProfile, updateProfile }}>
       {!loading && children}
     </AuthContext.Provider>
   );
