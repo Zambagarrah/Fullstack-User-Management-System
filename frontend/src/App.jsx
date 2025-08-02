@@ -11,6 +11,7 @@ import UserListPage from './pages/admin/UserListPage';
 import PrivateRoute from './utils/PrivateRoute';
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
+import Unauthorized from './pages/Uauthorized';
 import { ToastContainer } from 'react-toastify';
 
 const App = () => {
@@ -23,6 +24,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/unauthorized" element={<Unauthorized />} />
+
 
         <Route
           path="/dashboard"
