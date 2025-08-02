@@ -9,6 +9,8 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 
+import UserListPage from './pages/admin/UserListPage';
+
 import PrivateRoute from './utils/PrivateRoute';
 
 import Navbar from './components/Navbar';
@@ -36,6 +38,15 @@ const App = () => {
             </PrivateRoute>
           }
         />
+        <Route
+          path="/admin/users"
+          element={
+            <PrivateRoute>
+              {user?.is_staff ? <UserListPage /> : <Navigate to="/dashboard" />}
+            </PrivateRoute>
+          }
+        />
+
       </Routes>
       <ToastContainer />
     </>

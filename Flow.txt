@@ -7,3 +7,4 @@ Step 6: Auth Pages (Register & Login)
 Step 7: Profile Page & User Info Editing
 Step 8: Protected Routes & Dashboard Guarding
 Step 9: Logout Flow, Navbar, and Route Awareness
+Step 10 – Admin Panel (View/Edit/Delete Users).
