@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const axiosInstance = axios.create({
   baseURL: 'http://localhost:8000/api/', // adjust as needed
@@ -7,15 +8,17 @@ const axiosInstance = axios.create({
   },
 });
 
-axiosInstance.interceptors.request.use(
-  config => {
-    const token = localStorage.getItem('access_token');
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
+axiosInstance.interceptors.response.use(
+  res => res,
+  err => {
+    if (err.response?.status === 401) {
+      localStorage.removeItem('access');
+      toast.error('Session expired. Please log in again.');
+      window.location.href = '/login';
     }
-    return config;
-  },
-  error => Promise.reject(error)
+    return Promise.reject(err);
+  }
 );
+
 
 export default axiosInstance;
