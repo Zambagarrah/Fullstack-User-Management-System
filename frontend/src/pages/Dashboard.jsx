@@ -1,3 +1,15 @@
-const Dashboard = () => <div className="container"><h2>Dashboard Page</h2></div>;
-export default Dashboard;
+import React from 'react';
+import { useAuth } from '../context/AuthContext';
 
+const Dashboard = () => {
+  const { user } = useAuth();
+
+  return (
+    <div className="container mt-4">
+      <h2>Welcome, {user?.username}</h2>
+      <p>This is your private dashboard.</p>
+    </div>
+  );
+};
+
+export default Dashboard;
