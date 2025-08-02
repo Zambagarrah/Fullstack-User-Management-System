@@ -50,7 +50,12 @@ const App = () => {
           }
         />
       </Routes>
-      <ToastContainer />
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        theme="colored"
+      />
     </>
   );
 };
