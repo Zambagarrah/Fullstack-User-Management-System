@@ -8,7 +8,6 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
-
 import UserListPage from './pages/admin/UserListPage';
 
 import PrivateRoute from './utils/PrivateRoute';
