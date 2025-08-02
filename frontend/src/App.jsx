@@ -13,6 +13,7 @@ import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
 import Unauthorized from './pages/Uauthorized';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const { user } = useAuth(); // 👈 Add this to access user context

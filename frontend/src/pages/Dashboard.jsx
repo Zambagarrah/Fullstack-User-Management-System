@@ -1,5 +1,7 @@
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
+import { toast } from 'react-toastify';
+
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -16,6 +18,8 @@ const Dashboard = () => {
         return { title: '📋 User Dashboard', subtitle: 'View your profile, settings, and recent activity.' };
     }
   };
+
+  toast.warn('Something went wrong. Try again later.');
 
   const { title, subtitle } = getRoleBanner(user?.role);
 

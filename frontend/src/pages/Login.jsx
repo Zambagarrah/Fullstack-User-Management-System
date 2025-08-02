@@ -14,10 +14,10 @@ const Login = () => {
     e.preventDefault();
     try {
       await loginUser(formData);
-      toast.success('Login successful!');
+      toast.success('Welcome back, ${user.username}!');
       navigate('/dashboard');
     } catch (err) {
-      toast.error('Login failed');
+      toast.error('Login failed. Please check your credentials.');
     }
   };
 
