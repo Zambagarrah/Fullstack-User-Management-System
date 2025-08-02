@@ -23,7 +23,7 @@ A modular fullstack user management app built with React, Vite, Django, and JWT.
 ---
 
 ## 🧰 Tech Stack
-```
+
 
 | Layer         | Tools Used                          |
 |--------------|--------------------------------------|
@@ -32,7 +32,7 @@ A modular fullstack user management app built with React, Vite, Django, and JWT.
 | Authentication| JWT via djangorestframework-simplejwt |
 | API Handling  | Axios with token interceptor         |
 | Database      | SQLite (default, swappable)          |
-```
+
 
 ---
 
