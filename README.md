@@ -18,7 +18,7 @@ A modular fullstack user management app built with React, Vite, Django, and JWT.
 - 🛡️ Admin Panel: View, Edit, Delete Users
 - 🚫 Protected Routes (both frontend + backend)
 - 🎨 Responsive UI with Bootstrap 5
-- 🔔 Feedback via `react-toastify` alerts and `react-loading-skeleton` loaders
+- 🔔 Feedback via `react-toastify` alerts and `react-loading-skeleton` loaders.
 
 ---
 
