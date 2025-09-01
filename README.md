@@ -6,7 +6,7 @@ A modular fullstack user management app built with React, Vite, Django, and JWT.
 
 ## 🌐 Live Demo
 
-> _[Optional deployment link here — e.g. Vercel for frontend, Render/Railway for backend]_
+> _[]_
 
 ---
 
