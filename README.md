@@ -1,4 +1,4 @@
-# 🧩 Fullstack User Management System
+# Fullstack User Management System
 
 A modular fullstack user management app built with React, Vite, Django, and JWT. Includes protected routes, user profiles, and admin dashboard functionality.
 
