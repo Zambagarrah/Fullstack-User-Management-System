@@ -10,7 +10,7 @@ A modular fullstack user management app built with React, Vite, Django, and JWT.
 
 ---
 
-## 🚀 Features
+## Features
 
 - ✅ User Registration / Login / Logout
 - 🔐 JWT Authentication (access + refresh) via SimpleJWT
